@@ -37,3 +37,6 @@ jobs:
           echo test, and deploy your project.
           pacman -Syu --noconfirm --noprogressbar
           dd if=/dev/zero of=efiboot.img bs=1M count=1
+          mkfs.vfat efiboot.img
+          mkdir efiboot
+          mount -t efiboot.img efiboot
