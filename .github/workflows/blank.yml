@@ -39,4 +39,4 @@ jobs:
           dd if=/dev/zero of=efiboot.img bs=1M count=1
           mkfs.vfat efiboot.img
           mkdir efiboot
-          mount -t efiboot.img efiboot
+          mount efiboot.img efiboot
